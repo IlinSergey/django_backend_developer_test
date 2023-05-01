@@ -3,13 +3,15 @@ from rest_framework import serializers
 from catalog.models import Book
 
 
-class BookSerializer(serializers.ModelSerializer):
+class BookListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = ["id", "title"]
 
 
-class BookDetailSerializer(serializers.ModelSerializer):
+class BookSerializer(serializers.ModelSerializer):
+    author = serializers.ReadOnlyField(source="author.full_name")
+
     class Meta:
         model = Book
         fields = ["id", "title", "author", "description", "published"]
