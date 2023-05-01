@@ -1,0 +1,5 @@
+env/
+.flake8
+.vscode/
+.idea/
+__pycache__/
