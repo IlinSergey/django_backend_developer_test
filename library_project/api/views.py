@@ -4,7 +4,7 @@ from .serializers import BookSerializer, BookListSerializer
 from rest_framework import generics
 from api.permissions import IsOwnerOrReadOnly
 
-from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticated
 
 
 class BookList(generics.ListCreateAPIView):

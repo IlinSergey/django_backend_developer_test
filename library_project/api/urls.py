@@ -7,7 +7,7 @@ from .views import BookList, BookDetail
 
 
 urlpatterns = [
-    path("books/", BookList.as_view()),
+    path("books/", BookList.as_view(), name="book_list"),
     path("books/<int:pk>/", BookDetail.as_view()),
     path('token/', obtain_auth_token),
 ]
